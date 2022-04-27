@@ -1,0 +1,28 @@
+label: Hello Demo
+
+inputs:
+  - name: cron
+    label: Your Cron
+    type: string
+    required: true
+
+  - name: yourName
+    label: Your Name
+    type: string
+    required: true
+
+tasks:
+  - name: cron
+    label: Cron Job
+    type: trigger/cron
+    cron: ${cron}
+
+      
+  - label: Print a greeting
+    type: io/print
+    text: Hello ${yourName}
+    
+  - label: Print a farewell
+    type: io/print
+    text: Goodbye ${yourName}
+    

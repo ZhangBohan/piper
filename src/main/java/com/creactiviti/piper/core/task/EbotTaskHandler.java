@@ -13,22 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.creactiviti.piper.core.pipeline;
-
-import java.util.List;
-
+package com.creactiviti.piper.core.task;
 
 /**
+ * A startegy interface used for executing a {@link TaskExecution}.
  * 
- * @author Arik Cohen
- * @since Jun 18, 2016
+ * @author Bohan
+ * @since 2022-04-25
  */
-public interface PipelineRepository {
-  
-  Pipeline findOne (String aId);
-  
-  List<Pipeline> findAll ();
+public interface EbotTaskHandler<O> extends TaskHandler<O> {
 
-  default void create (Pipeline aPipeline) {}
-
+  O handle (TaskExecution aTask) throws Exception;
+  
 }
