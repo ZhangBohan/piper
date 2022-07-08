@@ -38,13 +38,13 @@ import com.google.common.collect.ImmutableMap;
 
 
 @SpringBootTest
-public class CoordinatorTests {
+class CoordinatorTests {
 
   @Autowired
   private DataSource dataSource;
   
   @Test
-  public void testStartJob () throws SQLException {
+  void testStartJob () throws SQLException {
     Coordinator coordinator = new Coordinator ();
    
     SyncMessageBroker messageBroker = new SyncMessageBroker();

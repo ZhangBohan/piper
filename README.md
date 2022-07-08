@@ -650,7 +650,7 @@ Supported types are `job.status` and `task.started`.
 
 ## Hello World
 
-Start a local Postgres database:
+Start a local MySQL database:
 
 ```
 ./scripts/database.sh
